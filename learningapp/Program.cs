@@ -2,9 +2,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Configuration
-.AddJsonFile("appsettings.json")
-    .AddEnvironmentVariables();
+builder.Configuration.AddAzureAppConfiguration("Endpoint=https://sumathiconfig.azconfig.io;Id=RaXD;Secret=EQuiVxyBVuU23XyExDHq9D4hVYnzYmQA4UjolAIvKIXSr9rhVLkFJQQJ99CBACBsN54H6o97AAACAZAC0DB7");
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
